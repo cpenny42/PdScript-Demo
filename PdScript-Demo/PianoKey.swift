@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// Moving left/right is pitchbend, up/down is volume
+
 class PianoKey: UIButton {
     
     let velocity = 127

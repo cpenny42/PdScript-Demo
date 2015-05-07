@@ -10,8 +10,12 @@ import Foundation
 
 class SynthViewController: UIViewController {
     
+    // Create the dynamic pd session
     var session = PdSession()
+    
+    // Input to synth voices is through the channels~ object
     var channelsReceiver: String
+    
     let synthType = "subtractive_synth" // subtractive_synth.pd
     
     var nextVoice = 0
