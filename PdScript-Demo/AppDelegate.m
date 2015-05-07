@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  PdScript-Demo
+//  PdScript
 //
-//  Created by Chris Penny on 4/29/15.
+//  Created by Chris Penny on 4/28/15.
 //  Copyright (c) 2015 Intrinsic Audio. All rights reserved.
 //
 
@@ -14,13 +14,37 @@
 
 @implementation AppDelegate
 
+// Set up Pd Externals before starting anything else
+// It's important that this is done here - It needs to be called before other classes are set up (before didFinishLaunchingWithOptions)
++(void)initialize
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^
+                  {
+                      // If you don't initialize a PdAudioController before initializing the externals, you will get a seg fault in m_class.c
+                      [[PdAudioController alloc] init];
+                      [PdExternals setup];
+                  }
+    );
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    _audioController = [[PdAudioController alloc] init];
+    
+    if ([_audioController configureAmbientWithSampleRate:44100
+                                          numberChannels:2
+                                           mixingEnabled:YES] != PdAudioOK) {
+        NSLog(@"failed to initialize Pd audio components");
+    }
+    PdDispatcher *dispatcher = [PdDispatcher new];
+    [PdBase setDelegate:dispatcher];
+    
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    _audioController.active = NO;
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
@@ -35,6 +59,7 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    _audioController.active = YES;
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

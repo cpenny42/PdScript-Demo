@@ -1,25 +1,1087 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Synth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SynthViewController" customModule="PdScript_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kt3-ET-koM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TealGradient.tif" translatesAutoresizingMaskIntoConstraints="NO" id="hep-uD-eky">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="992" height="412"/>
+                                        </variation>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt3-Kd-Sb7" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="10" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aux-q7-odr" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="80" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ms-Js-Ob6" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="150" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5K-pS-ITv" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="220" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAP-ZO-Nhh" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="290" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9B-N7-ZAp" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="360" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulh-nL-8eS" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="430" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezE-Li-vHj" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="500" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qka-tR-rnB" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="570" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRL-Oa-zwv" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="640" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxm-Q6-BsA" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="710" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdv-bs-E6y" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="780" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTO-av-ZO1" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="850" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOx-VW-RD8" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.97902856691919193" green="0.97902856691919193" blue="0.97902856691919193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="920" y="210" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO8-rw-iLI" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="45" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48H-2k-9fd" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="115" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tD-zv-UH0" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="255" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-pC-ycB" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="325" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOi-JH-dIc" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="395" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9z-7H-usm" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="535" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-A6-bD6" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="605" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfW-AJ-NCy" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="745" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxV-HI-RcM" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="815" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSt-A2-Yxr" customClass="PianoKey" customModule="PdScript_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <color key="backgroundColor" red="0.26377051767676762" green="0.26377051767676762" blue="0.26377051767676762" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="885" y="10" width="62" height="192"/>
+                                        </variation>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="hep-uD-eky"/>
+                                        <exclude reference="Kt3-Kd-Sb7"/>
+                                        <exclude reference="aux-q7-odr"/>
+                                        <exclude reference="3Ms-Js-Ob6"/>
+                                        <exclude reference="V5K-pS-ITv"/>
+                                        <exclude reference="MAP-ZO-Nhh"/>
+                                        <exclude reference="x9B-N7-ZAp"/>
+                                        <exclude reference="Ulh-nL-8eS"/>
+                                        <exclude reference="ezE-Li-vHj"/>
+                                        <exclude reference="qka-tR-rnB"/>
+                                        <exclude reference="sRL-Oa-zwv"/>
+                                        <exclude reference="nxm-Q6-BsA"/>
+                                        <exclude reference="Rdv-bs-E6y"/>
+                                        <exclude reference="JTO-av-ZO1"/>
+                                        <exclude reference="yOx-VW-RD8"/>
+                                        <exclude reference="FO8-rw-iLI"/>
+                                        <exclude reference="48H-2k-9fd"/>
+                                        <exclude reference="2tD-zv-UH0"/>
+                                        <exclude reference="9Vq-pC-ycB"/>
+                                        <exclude reference="kOi-JH-dIc"/>
+                                        <exclude reference="n9z-7H-usm"/>
+                                        <exclude reference="IVd-A6-bD6"/>
+                                        <exclude reference="rfW-AJ-NCy"/>
+                                        <exclude reference="vxV-HI-RcM"/>
+                                        <exclude reference="kSt-A2-Yxr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="348" width="992" height="412"/>
+                                    <mask key="subviews">
+                                        <include reference="hep-uD-eky"/>
+                                        <include reference="Kt3-Kd-Sb7"/>
+                                        <include reference="aux-q7-odr"/>
+                                        <include reference="3Ms-Js-Ob6"/>
+                                        <include reference="V5K-pS-ITv"/>
+                                        <include reference="MAP-ZO-Nhh"/>
+                                        <include reference="x9B-N7-ZAp"/>
+                                        <include reference="Ulh-nL-8eS"/>
+                                        <include reference="ezE-Li-vHj"/>
+                                        <include reference="qka-tR-rnB"/>
+                                        <include reference="sRL-Oa-zwv"/>
+                                        <include reference="nxm-Q6-BsA"/>
+                                        <include reference="Rdv-bs-E6y"/>
+                                        <include reference="JTO-av-ZO1"/>
+                                        <include reference="yOx-VW-RD8"/>
+                                        <include reference="FO8-rw-iLI"/>
+                                        <include reference="48H-2k-9fd"/>
+                                        <include reference="2tD-zv-UH0"/>
+                                        <include reference="9Vq-pC-ycB"/>
+                                        <include reference="kOi-JH-dIc"/>
+                                        <include reference="n9z-7H-usm"/>
+                                        <include reference="IVd-A6-bD6"/>
+                                        <include reference="rfW-AJ-NCy"/>
+                                        <include reference="vxV-HI-RcM"/>
+                                        <include reference="kSt-A2-Yxr"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgT-me-l9s">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ldi-AV-7kY">
+                                        <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                        <segments>
+                                            <segment title="On"/>
+                                            <segment title="Off"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="76" y="44" width="65" height="29"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc1On:" destination="BYZ-38-t0r" eventType="valueChanged" id="ilc-Sc-Djh"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OSC 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZk-a8-nDN">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="17" y="47" width="51" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OSC 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMA-iI-Awu">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="17" y="98" width="51" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ew3-6i-ejd">
+                                        <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                        <segments>
+                                            <segment title="On"/>
+                                            <segment title="Off"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="76" y="95" width="65" height="29"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc2On:" destination="BYZ-38-t0r" eventType="valueChanged" id="CKB-JW-dwo"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bZd-Xh-R2n">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="172" y="42" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc1Phase:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZxR-9q-Pud"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhZ-BR-uj9">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="206" y="15" width="48" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ITh-aO-qJH">
+                                        <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                        <segments>
+                                            <segment title="o"/>
+                                            <segment title="-"/>
+                                            <segment title="x"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="296" y="44" width="68" height="29"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc1Mode:" destination="BYZ-38-t0r" eventType="valueChanged" id="fFd-Gz-yGj"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0xE-8V-a8o">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="172" y="94" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc2Phase:" destination="BYZ-38-t0r" eventType="valueChanged" id="gsW-4J-P8S"/>
+                                        </connections>
+                                    </slider>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-mY-mfF">
+                                        <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                        <segments>
+                                            <segment title="o"/>
+                                            <segment title="-"/>
+                                            <segment title="x"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="296" y="96" width="68" height="29"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc2Mode:" destination="BYZ-38-t0r" eventType="valueChanged" id="n8h-UK-7NQ"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-tl-6gc">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="306" y="15" width="45" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oscillators" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Faw-It-gT0">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="44" y="15" width="82" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-12" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="06J-2v-lfU">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="377" y="42" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc1Semi:" destination="BYZ-38-t0r" eventType="valueChanged" id="YbJ-u9-iUf"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgo-Sg-Flu">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="417" y="15" width="39" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-12" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="sGT-DP-AAU">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="377" y="94" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc2Semi:" destination="BYZ-38-t0r" eventType="valueChanged" id="jpL-xv-pJR"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-100" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="niO-Z6-1Fl">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="499" y="42" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc1Cent:" destination="BYZ-38-t0r" eventType="valueChanged" id="RYe-iC-k24"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMu-BS-vJv">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="539" y="15" width="37" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-100" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Yhg-9E-GFb">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="499" y="94" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc2Cent:" destination="BYZ-38-t0r" eventType="valueChanged" id="bHH-cg-N2K"/>
+                                        </connections>
+                                    </slider>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bl9-s3-pif">
+                                        <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                        <segments>
+                                            <segment title="Sine"/>
+                                            <segment title="Triangle"/>
+                                            <segment title="Sawtooth"/>
+                                            <segment title="Square"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="653" y="44" width="291" height="29"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc1Waveform:" destination="BYZ-38-t0r" eventType="valueChanged" id="7gB-Oc-ojh"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S5e-6b-L84">
+                                        <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                        <segments>
+                                            <segment title="Sine"/>
+                                            <segment title="Triangle"/>
+                                            <segment title="Sawtooth"/>
+                                            <segment title="Square"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="653" y="96" width="291" height="29"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc2Waveform:" destination="BYZ-38-t0r" eventType="valueChanged" id="Myg-ix-WGb"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="iXC-BP-RkI">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="92" y="166" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="noiseAmount:" destination="BYZ-38-t0r" eventType="valueChanged" id="6MY-Mt-NRF"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-hM-2tn">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="76" y="145" width="44" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="127" translatesAutoresizingMaskIntoConstraints="NO" id="ODP-ke-u6A">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="92" y="203" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="noiseFilter:" destination="BYZ-38-t0r" eventType="valueChanged" id="3AE-LM-vSE"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ssy-Ng-y2E">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="92" y="239" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="noiseAttack:" destination="BYZ-38-t0r" eventType="valueChanged" id="iOZ-ia-mzK"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="tTf-ch-ATd">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="92" y="277" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="noiseDecay:" destination="BYZ-38-t0r" eventType="valueChanged" id="j3O-JX-erv"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogT-Py-vRi">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="17" y="170" width="60" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCL-lh-8dj">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="17" y="207" width="60" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktj-bq-nu9">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="17" y="243" width="60" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQO-sT-Ema">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="17" y="281" width="49" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="yip-gP-Hwc">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="303" y="166" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="attack:" destination="BYZ-38-t0r" eventType="valueChanged" id="TaN-bz-hYe"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADSR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q2-Aq-1iV">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="287" y="145" width="46" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="500" minValue="0.0" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="uVr-kM-ol4">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="303" y="203" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="decay:" destination="BYZ-38-t0r" eventType="valueChanged" id="jzC-gA-u5T"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="47E-97-Y5C">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="303" y="239" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="sustain:" destination="BYZ-38-t0r" eventType="valueChanged" id="zfW-ki-JPO"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5000" translatesAutoresizingMaskIntoConstraints="NO" id="F7D-8T-owg">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="303" y="277" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="release:" destination="BYZ-38-t0r" eventType="valueChanged" id="JwE-Cc-bLu"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-HJ-72b">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="233" y="170" width="50" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PT3-aR-b5y">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="228" y="207" width="60" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sustain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDE-Xh-z4m">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="228" y="243" width="60" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Has-6o-zyY">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="228" y="281" width="61" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-0E-xFi">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="504" y="187" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc1Pan:" destination="BYZ-38-t0r" eventType="valueChanged" id="jBa-Sn-mRh"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bq0-SE-PRs">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="548" y="166" width="30" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CWH-oW-xrX">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="504" y="224" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc2Pan:" destination="BYZ-38-t0r" eventType="valueChanged" id="9cQ-Nl-8X0"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Osc1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0U-cY-7se">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="448" y="191" width="41" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Osc2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ8-pp-y8r">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="438" y="228" width="60" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hrW-3A-xCt">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="626" y="187" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc1Mix:" destination="BYZ-38-t0r" eventType="valueChanged" id="KCJ-iB-qBm"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqf-GX-co3">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="671" y="166" width="28" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="2.1000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="4hs-fZ-yds">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="626" y="224" width="118" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="osc2Mix:" destination="BYZ-38-t0r" eventType="valueChanged" id="HZQ-kD-yxp"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minValue="0.0" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="N5D-Tm-hQe">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="758" y="166" width="228" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="filter:" destination="BYZ-38-t0r" eventType="valueChanged" id="GwC-n4-hyy"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCN-99-Lby">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="853" y="145" width="38" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="CbO-lo-nBs">
+                                        <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="758" y="225" width="228" height="31"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="volume:" destination="BYZ-38-t0r" eventType="valueChanged" id="by2-cE-jDY"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiO-gR-tNx">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="844" y="203" width="57" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJJ-ct-bNS">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7a-Il-7PS">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" title="▶︎">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="widthClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="138" y="0.0" width="86" height="47"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="octaveUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzk-6b-gnP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flU-gz-oLc">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" title="◀︎">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="widthClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="0.0" y="-6" width="86" height="60"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="octaveDown" destination="BYZ-38-t0r" eventType="touchUpInside" id="Flu-IE-RDc"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6u-Bk-elu">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=regular" fixedFrame="YES">
+                                                    <rect key="frame" x="94" y="5" width="36" height="39"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="z7a-Il-7PS"/>
+                                                <exclude reference="flU-gz-oLc"/>
+                                                <exclude reference="F6u-Bk-elu"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="760" y="268" width="224" height="47"/>
+                                            <mask key="subviews">
+                                                <include reference="z7a-Il-7PS"/>
+                                                <include reference="flU-gz-oLc"/>
+                                                <include reference="F6u-Bk-elu"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waveform" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaz-2S-RKZ">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="759" y="15" width="78" height="21"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63676220631808012" green="0.80535381563314978" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Ldi-AV-7kY"/>
+                                        <exclude reference="bZk-a8-nDN"/>
+                                        <exclude reference="sMA-iI-Awu"/>
+                                        <exclude reference="ew3-6i-ejd"/>
+                                        <exclude reference="bZd-Xh-R2n"/>
+                                        <exclude reference="fhZ-BR-uj9"/>
+                                        <exclude reference="ITh-aO-qJH"/>
+                                        <exclude reference="0xE-8V-a8o"/>
+                                        <exclude reference="AhN-mY-mfF"/>
+                                        <exclude reference="rFC-tl-6gc"/>
+                                        <exclude reference="Faw-It-gT0"/>
+                                        <exclude reference="06J-2v-lfU"/>
+                                        <exclude reference="vgo-Sg-Flu"/>
+                                        <exclude reference="sGT-DP-AAU"/>
+                                        <exclude reference="niO-Z6-1Fl"/>
+                                        <exclude reference="OMu-BS-vJv"/>
+                                        <exclude reference="Yhg-9E-GFb"/>
+                                        <exclude reference="Bl9-s3-pif"/>
+                                        <exclude reference="S5e-6b-L84"/>
+                                        <exclude reference="iXC-BP-RkI"/>
+                                        <exclude reference="PvX-hM-2tn"/>
+                                        <exclude reference="ODP-ke-u6A"/>
+                                        <exclude reference="ssy-Ng-y2E"/>
+                                        <exclude reference="tTf-ch-ATd"/>
+                                        <exclude reference="ogT-Py-vRi"/>
+                                        <exclude reference="YCL-lh-8dj"/>
+                                        <exclude reference="Ktj-bq-nu9"/>
+                                        <exclude reference="MQO-sT-Ema"/>
+                                        <exclude reference="yip-gP-Hwc"/>
+                                        <exclude reference="4q2-Aq-1iV"/>
+                                        <exclude reference="uVr-kM-ol4"/>
+                                        <exclude reference="47E-97-Y5C"/>
+                                        <exclude reference="F7D-8T-owg"/>
+                                        <exclude reference="5jj-HJ-72b"/>
+                                        <exclude reference="PT3-aR-b5y"/>
+                                        <exclude reference="eDE-Xh-z4m"/>
+                                        <exclude reference="Has-6o-zyY"/>
+                                        <exclude reference="hH7-0E-xFi"/>
+                                        <exclude reference="Bq0-SE-PRs"/>
+                                        <exclude reference="CWH-oW-xrX"/>
+                                        <exclude reference="r0U-cY-7se"/>
+                                        <exclude reference="fJ8-pp-y8r"/>
+                                        <exclude reference="hrW-3A-xCt"/>
+                                        <exclude reference="Sqf-GX-co3"/>
+                                        <exclude reference="4hs-fZ-yds"/>
+                                        <exclude reference="N5D-Tm-hQe"/>
+                                        <exclude reference="LCN-99-Lby"/>
+                                        <exclude reference="CbO-lo-nBs"/>
+                                        <exclude reference="fiO-gR-tNx"/>
+                                        <exclude reference="hJJ-ct-bNS"/>
+                                        <exclude reference="Uaz-2S-RKZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="28" width="992" height="328"/>
+                                    <mask key="subviews">
+                                        <include reference="Ldi-AV-7kY"/>
+                                        <include reference="bZk-a8-nDN"/>
+                                        <include reference="sMA-iI-Awu"/>
+                                        <include reference="ew3-6i-ejd"/>
+                                        <include reference="bZd-Xh-R2n"/>
+                                        <include reference="fhZ-BR-uj9"/>
+                                        <include reference="ITh-aO-qJH"/>
+                                        <include reference="0xE-8V-a8o"/>
+                                        <include reference="AhN-mY-mfF"/>
+                                        <include reference="rFC-tl-6gc"/>
+                                        <include reference="Faw-It-gT0"/>
+                                        <include reference="06J-2v-lfU"/>
+                                        <include reference="vgo-Sg-Flu"/>
+                                        <include reference="sGT-DP-AAU"/>
+                                        <include reference="niO-Z6-1Fl"/>
+                                        <include reference="OMu-BS-vJv"/>
+                                        <include reference="Yhg-9E-GFb"/>
+                                        <include reference="Bl9-s3-pif"/>
+                                        <include reference="S5e-6b-L84"/>
+                                        <include reference="iXC-BP-RkI"/>
+                                        <include reference="PvX-hM-2tn"/>
+                                        <include reference="ODP-ke-u6A"/>
+                                        <include reference="ssy-Ng-y2E"/>
+                                        <include reference="tTf-ch-ATd"/>
+                                        <include reference="ogT-Py-vRi"/>
+                                        <include reference="YCL-lh-8dj"/>
+                                        <include reference="Ktj-bq-nu9"/>
+                                        <include reference="MQO-sT-Ema"/>
+                                        <include reference="yip-gP-Hwc"/>
+                                        <include reference="4q2-Aq-1iV"/>
+                                        <include reference="uVr-kM-ol4"/>
+                                        <include reference="47E-97-Y5C"/>
+                                        <include reference="F7D-8T-owg"/>
+                                        <include reference="5jj-HJ-72b"/>
+                                        <include reference="PT3-aR-b5y"/>
+                                        <include reference="eDE-Xh-z4m"/>
+                                        <include reference="Has-6o-zyY"/>
+                                        <include reference="hH7-0E-xFi"/>
+                                        <include reference="Bq0-SE-PRs"/>
+                                        <include reference="CWH-oW-xrX"/>
+                                        <include reference="r0U-cY-7se"/>
+                                        <include reference="fJ8-pp-y8r"/>
+                                        <include reference="hrW-3A-xCt"/>
+                                        <include reference="Sqf-GX-co3"/>
+                                        <include reference="4hs-fZ-yds"/>
+                                        <include reference="N5D-Tm-hQe"/>
+                                        <include reference="LCN-99-Lby"/>
+                                        <include reference="CbO-lo-nBs"/>
+                                        <include reference="fiO-gR-tNx"/>
+                                        <include reference="hJJ-ct-bNS"/>
+                                        <include reference="Uaz-2S-RKZ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50350120710069035" green="0.95916193181818177" blue="0.90108388248321658" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="kt3-ET-koM"/>
+                                <exclude reference="kgT-me-l9s"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="kt3-ET-koM"/>
+                                <include reference="kgT-me-l9s"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="noteA" destination="x9B-N7-ZAp" id="bWn-T0-lld"/>
+                        <outlet property="noteAplus" destination="JTO-av-ZO1" id="LgM-G8-lEc"/>
+                        <outlet property="noteAsharp" destination="kOi-JH-dIc" id="2g8-H1-teb"/>
+                        <outlet property="noteAsharpPlus" destination="kSt-A2-Yxr" id="z7T-1M-djg"/>
+                        <outlet property="noteB" destination="Ulh-nL-8eS" id="Zex-yT-fbp"/>
+                        <outlet property="noteBplus" destination="yOx-VW-RD8" id="7eA-K4-coU"/>
+                        <outlet property="noteC" destination="Kt3-Kd-Sb7" id="dDX-9c-6xJ"/>
+                        <outlet property="noteCplus" destination="ezE-Li-vHj" id="kDE-jP-leb"/>
+                        <outlet property="noteCsharp" destination="FO8-rw-iLI" id="oVJ-6Z-E8a"/>
+                        <outlet property="noteCsharpPlus" destination="n9z-7H-usm" id="hUE-wa-pZy"/>
+                        <outlet property="noteD" destination="aux-q7-odr" id="pph-hK-nMR"/>
+                        <outlet property="noteDplus" destination="qka-tR-rnB" id="Ceg-oE-hVd"/>
+                        <outlet property="noteDsharp" destination="48H-2k-9fd" id="9ik-A6-V4S"/>
+                        <outlet property="noteDsharpPlus" destination="IVd-A6-bD6" id="Vc2-xt-DCB"/>
+                        <outlet property="noteE" destination="3Ms-Js-Ob6" id="v3C-bA-Xvg"/>
+                        <outlet property="noteEplus" destination="sRL-Oa-zwv" id="sjk-3y-dO1"/>
+                        <outlet property="noteF" destination="V5K-pS-ITv" id="hfi-GD-TPq"/>
+                        <outlet property="noteFplus" destination="nxm-Q6-BsA" id="C9g-ps-udc"/>
+                        <outlet property="noteFsharp" destination="2tD-zv-UH0" id="Pzv-oT-XRA"/>
+                        <outlet property="noteFsharpPlus" destination="rfW-AJ-NCy" id="mhG-eg-ZbS"/>
+                        <outlet property="noteG" destination="MAP-ZO-Nhh" id="El9-a9-OMj"/>
+                        <outlet property="noteGplus" destination="Rdv-bs-E6y" id="ZFU-7e-s56"/>
+                        <outlet property="noteGsharp" destination="9Vq-pC-ycB" id="da3-dT-2tc"/>
+                        <outlet property="noteGsharpPlus" destination="vxV-HI-RcM" id="7v5-sZ-7Xj"/>
+                        <outlet property="octaveLabel" destination="F6u-Bk-elu" id="sac-f7-Vd1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="TealGradient.tif" width="3255" height="1905"/>
+    </resources>
 </document>
